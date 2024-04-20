@@ -26,7 +26,7 @@ const PokemonList: React.FC = () => {
     setSearchResults(results || []);
   }, [debouncedSearchQuery, pokemonList]);
 
-  if (!isLoading) {
+  if (isLoading) {
     return (
       <>
       <div className="container w-[1250px]">
