@@ -1,6 +1,5 @@
 jest.mock('../css/SkeletonCard.css', () => ({}));
 jest.mock('../css/PokemonList.css', () => ({}));
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { useGetPokemonListQuery } from '../slices/pokemonListSlice';

@@ -1,10 +1,8 @@
 jest.mock('../css/Pokemon.css', () => ({}));
 jest.mock('../css/PokemonDetails.css', () => ({}));
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import PokemonDetails from '../views/PokemonDetails';
-import { useGetPokemonDetailsQuery } from '../slices/pokemonDetailsSlice';
 
 jest.mock('../slices/pokemonDetailsSlice', () => ({
   useGetPokemonDetailsQuery: jest.fn(),

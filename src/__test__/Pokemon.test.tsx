@@ -3,7 +3,7 @@ jest.mock('../css/Pokemon.css', () => ({}));
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Pokemon from '../components/Pokemon';
-import { PokemonDetails, TypeSlot, PokemonType } from '../types/types';
+import { PokemonDetails} from '../types/types';
 
 describe('Pokemon component', () => {
   const mockPokemonDetails: PokemonDetails = {
