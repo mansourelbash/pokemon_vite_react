@@ -29,15 +29,24 @@ const PokemonList: React.FC = () => {
   if (isLoading) {
     return (
       <>
-      <div className="container w-[1250px]">
-        <h1 className="title">Welcome to Pokemon List</h1>
-        <div className="h-9 bg-gray-300 rounded mb-4 w-[250px] mx-auto"></div>
-        <div className="card-container">
+     <div className="container">
+  <h1 className="title">Welcome to Pokemon List</h1>
+  <div className="h-9 bg-gray-300 rounded mb-4 mx-auto"></div>
+      {window.innerWidth > 768 ? (
+        <div className="card-container grid-cols-6">
           {[...Array(18)].map((_, index) => (
             <SkeletonCard key={index} />
           ))}
         </div>
-      </div>
+      ) : (
+        <div className="card-container grid-cols-2">
+          {[...Array(18)].map((_, index) => (
+            <SkeletonCard key={index} />
+          ))}
+        </div>
+      )}
+    </div>
+
       </>
     );
   }
@@ -57,7 +66,8 @@ const PokemonList: React.FC = () => {
       <Link to={`/pokemon/${pokemon.name}`} className="card-link">View Details</Link>
     </div>
   );
-
+  const columnCount = window.innerWidth <= 700 ? 2 : 6;
+  const width = window.innerWidth <= 700 ? window.innerWidth : 1250;
   return (
     <div className="container">
       <h1 className="title">Welcome to Pokemon List</h1>
@@ -70,12 +80,12 @@ const PokemonList: React.FC = () => {
 
       {searchResults.length > 0 ? (
         <FixedSizeGrid
-          columnCount={6} 
+           columnCount={columnCount} 
           columnWidth={200}
           height={600}
           rowCount={Math.ceil(searchResults.length / 10)} 
           rowHeight={200}
-          width={1250}
+          width={width}
         >
           {({ columnIndex, rowIndex, style }) => {
             const index = rowIndex * 10 + columnIndex;
