@@ -1,0 +1,43 @@
+.container {
+  @apply mx-auto py-8;
+}
+
+.title {
+  @apply text-4xl font-bold text-gray-900 text-center mb-4;
+}
+
+.search-container {
+  @apply flex justify-center mb-4;
+}
+
+.search-input {
+  @apply w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.search-icon {
+  @apply absolute top-3 left-3 text-gray-500 pointer-events-none;
+}
+
+.card-container {
+  @apply grid grid-cols-6 gap-4;
+}
+
+.card {
+  @apply bg-white rounded-lg p-4 shadow-md border;
+}
+
+.card-image {
+  @apply mx-auto;
+}
+
+.card-name {
+  @apply text-center mt-2 text-xl font-semibold capitalize;
+}
+
+.card-link {
+  @apply block text-center mt-2 text-blue-600 underline hover:text-blue-700;
+}
+
+.no-pokemon {
+  @apply text-center mt-[30px];
+}

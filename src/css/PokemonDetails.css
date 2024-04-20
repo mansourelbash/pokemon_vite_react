@@ -1,0 +1,35 @@
+.loading-container {
+  @apply flex flex-col items-center mt-10;
+}
+
+.pulse-container {
+  @apply animate-pulse bg-gray-200 rounded-lg shadow-md p-6 mb-8;
+}
+
+.loading-bar {
+  @apply bg-gray-300 h-6 rounded mb-2;
+}
+
+.loading-bar-long {
+  @apply w-48;
+}
+
+.loading-bar-short {
+  @apply w-20;
+}
+
+.loading-bar-group {
+  @apply flex;
+}
+
+.loading-image {
+  @apply bg-gray-300 h-16 w-16 rounded mb-2 block m-auto;
+}
+
+.container {
+  @apply flex flex-col items-center mt-10;
+}
+
+.link {
+  @apply text-blue-500 hover:text-blue-700 underline;
+}

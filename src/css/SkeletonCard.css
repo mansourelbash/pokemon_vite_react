@@ -1,0 +1,15 @@
+.skeleton-card {
+  @apply bg-gray-200 rounded-lg p-4 shadow-md border animate-pulse;
+}
+
+.skeleton-element {
+  @apply bg-gray-300 rounded mb-4;
+}
+
+.skeleton-element-small {
+  @apply bg-gray-300 w-20 rounded mb-2;
+}
+
+.skeleton-element-large {
+  @apply bg-gray-300 w-40 rounded mb-2;
+}
