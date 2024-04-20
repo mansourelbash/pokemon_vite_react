@@ -42,16 +42,14 @@ const PokemonList: React.FC = () => {
     );
   }
 
-  if (isError) {
-    if ('status' in error && 'data' in error) {
-      return <div>Error: {error.status}</div>;
-    }
-    if ('message' in error) {
-      return <div>Error: {error.message}</div>;
+  if (isError && error) {
+    const err = error as { status?: unknown, message?: string };
+    if (err.message) {
+      return <div>Error: {err.message}</div>;
     }
     return <div>Error occurred</div>;
   }
-
+  
   const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => (
     <div className="card">
       <img src={pokemon.spriteUrl} alt={pokemon.name} className="card-image" />

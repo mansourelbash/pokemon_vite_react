@@ -8,7 +8,7 @@ export interface Pokemon {
 export interface PokemonDetails extends Pokemon {
   height: number;
   weight: number;
-  types: {slot: number; type: PokemonType;};
+  types: PokemonTypeSlot[];
   sprites: {
     front_default: string; 
     back_default: string; 
@@ -21,7 +21,7 @@ export interface PokemonListResponse {
 
 export interface PokemonType {
   name: string;
-  url: string;
+  url?: string; 
 }
 
 export interface PokemonTypeSlot {
@@ -29,10 +29,9 @@ export interface PokemonTypeSlot {
   type: PokemonType;
 }
 
-export interface PokemonTypeSprites{
+export interface PokemonTypeSprites {
   front_default: string;
 }
-
 
 export interface TypeSlot {
   slot: number;

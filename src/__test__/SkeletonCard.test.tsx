@@ -1,5 +1,4 @@
 jest.mock('../css/SkeletonCard.css', () => ({}));
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import SkeletonCard from '../components/SkeletonCard';
 
